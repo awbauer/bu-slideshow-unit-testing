@@ -1043,7 +1043,9 @@ class BU_Slideshow {
 	
 }
 
-add_action('plugins_loaded', array(BU_Slideshow, 'init'));
+$slideshow = new BU_Slideshow;
+
+add_action('plugins_loaded', array($slideshow, 'init'));
 
 /**
  * Function wrapper for adding slideshow display to themes etc. See shortcode handler
